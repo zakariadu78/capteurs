@@ -1,0 +1,29 @@
+
+* Project SCHEMATIC_1
+* Mentor Graphics Netlist Created with Version 15.1.1
+* File created Wed Dec 01 16:00:03 2021
+* Inifile   : 
+*
+* Config file: C:\MentorGraphics\SystemVision15.1\standard\svspice.cfg
+*
+* Options   : -_ -h -kC:\MentorGraphics\SystemVision15.1\standard\svspice.cfg -gschematic_1.tempfile 
+* 
+* Levels    : 
+* 
+.option noinclib
+* Models for Eldo<->VHDL-AMS data conversion
+.model a2d_eldo a2d mode=std_logic
+.model d2a_eldo d2a mode=std_logic
+.defhook a2d_eldo
+.defhook d2a_eldo
+YN1I1 LIGNE(DEFAULT) PORT: N1N3 N1N5 0
+YV_PULSE1 V_PULSE(IDEAL) GENERIC: PERIOD="20 NS" PULSE="1.0" WIDTH="10 NS" 
++ PORT: N1N3 0
+YRCHARGE RESISTOR(IDEAL) GENERIC: RES="50.0" PORT: 0 N1N5
+* DICTIONARY 1
+* GND = 0
+.GLOBAL ELECTRICAL_REF
+.model V_PULSE(IDEAL) macro lang=vhdlams LIB=EDULIB
+.model LIGNE(DEFAULT) macro lang=vhdlams LIB=WORK
+.model RESISTOR(IDEAL) macro lang=vhdlams LIB=EDULIB
+.END

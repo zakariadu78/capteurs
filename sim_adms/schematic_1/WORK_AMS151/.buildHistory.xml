@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Build-History xsi:noNamespaceSchemaLocation="BuildHistory.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Compilation>
+    <ENTITY-LIGNE__ARCHITECTURE-DEFAULT_LIGNE time="Wed Dec 01 15:50:03 2021">
+      <tool name="vacom" version="v1.5_1.0"/>
+      <options ordinal="-prod pr" extra=""/>
+    </ENTITY-LIGNE__ARCHITECTURE-DEFAULT_LIGNE>
+  </Compilation>
+</Build-History>

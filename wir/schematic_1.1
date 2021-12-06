@@ -1,0 +1,65 @@
+| Wirelist created using version 5.4.
+V 5.4
+K 213925957000 schematic_1
+DW schematic_1
+Q Case
+|Q Electrical:resistor 1
+AS Electrical:resistor REFDES=R?
+AS Electrical:resistor PINORDER=P1 P2
+AS Electrical:resistor SIMMODEL=VHDL
+AS Electrical:resistor VHDL_GENERIC_RES=RESISTANCE
+AS Electrical:resistor VHDLFILE=RESISTOR.VHD
+AS Electrical:resistor DESCRIPTION=RESISTOR
+AS Electrical:resistor VHDL=EDULIB.RESISTOR(IDEAL)
+AS Electrical:resistor INOV_VER_REC=18:42_4-18-03
+AP Electrical:resistor 1 PINTYPE=TERMINAL
+AP Electrical:resistor 1 VHDL_TYPE=ELECTRICAL
+AP Electrical:resistor 2 PINTYPE=TERMINAL
+AP Electrical:resistor 2 VHDL_TYPE=ELECTRICAL
+|Q ligne 1
+AS ligne PINORDER=ENTREE SORTIE MASSE
+AS ligne VHDL_GENERIC_ZC=REAL:=50.0
+AS ligne VHDL_GENERIC_LONGUEUR=REAL:=1.0
+AS ligne VHDL_GENERIC_V_PHI=REAL:=1.5E8
+AS ligne SIMMODEL=VHDL
+AS ligne VHDL=LIGNE(DEFAULT)
+AS ligne VHDLFILE=LIGNE.VHD
+AS ligne INOV_VER_REC=14:18_12-1-21
+AP ligne 1 VHDL_TYPE=ELECTRICAL
+AP ligne 1 PINTYPE=TERMINAL
+AP ligne 2 VHDL_TYPE=ELECTRICAL
+AP ligne 2 PINTYPE=TERMINAL
+AP ligne 3 VHDL_TYPE=ELECTRICAL
+AP ligne 3 PINTYPE=TERMINAL
+|Q Electrical:v_pulse 1
+AS Electrical:v_pulse PINORDER=POS NEG
+AS Electrical:v_pulse SIMMODEL=VHDL
+AS Electrical:v_pulse VHDL_GENERIC_AC_PHASE=REAL:=0.0
+AS Electrical:v_pulse VHDL_GENERIC_AC_MAG=VOLTAGE:=0.0
+AS Electrical:v_pulse VHDL_GENERIC_PERIOD=TIME
+AS Electrical:v_pulse VHDL_GENERIC_WIDTH=TIME
+AS Electrical:v_pulse VHDL_GENERIC_DELAY=TIME:=0 MS
+AS Electrical:v_pulse VHDL_GENERIC_TP2I=TIME:=1 NS
+AS Electrical:v_pulse VHDL_GENERIC_TI2P=TIME:=1 NS
+AS Electrical:v_pulse VHDL_GENERIC_PULSE=VOLTAGE
+AS Electrical:v_pulse VHDL_GENERIC_INITIAL=VOLTAGE:=0.0
+AS Electrical:v_pulse VHDLFILE=V_PULSE.VHD
+AS Electrical:v_pulse DESCRIPTION=PULSE VOLTAGE SOURCE
+AS Electrical:v_pulse VHDL=EDULIB.V_PULSE
+AS Electrical:v_pulse REFDES=V_PULSE?
+AS Electrical:v_pulse INOV_VER_REC=14:46_4-22-03
+AP Electrical:v_pulse 1 PINTYPE=TERMINAL
+AP Electrical:v_pulse 1 VHDL_TYPE=ELECTRICAL
+AP Electrical:v_pulse 2 PINTYPE=TERMINAL
+AP Electrical:v_pulse 2 VHDL_TYPE=ELECTRICAL
+G ELECTRICAL_REF
+M Electrical:resistor $1I8
+I $1I8 Electrical:resistor ELECTRICAL_REF $1N5 VHDL_GENERIC_RES=RESISTANCE:=50.0`LABEL=RCHARGE`REFDES=R?`
+|R 18:42_4-18-03
+M ligne $1I1
+I $1I1 ligne $1N3 $1N5 ELECTRICAL_REF 
+|R 14:18_12-1-21
+M Electrical:v_pulse $1I2
+I $1I2 Electrical:v_pulse $1N3 ELECTRICAL_REF VHDL_GENERIC_PERIOD=TIME:=20 NS`VHDL_GENERIC_WIDTH=TIME:=10 NS`VHDL_GENERIC_PULSE=VOLTAGE:=1.0`VHDL=EDULIB.V_PULSE(IDEAL)`LABEL=V_PULSE1`REFDES=V_PULSE?`
+|R 14:46_4-22-03
+EW

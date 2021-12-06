@@ -1,0 +1,18 @@
+[VHDL-AMS Entity]
+NAME = ligne
+SOURCE = C:\Users\eleves\Desktop\tp_capteur\hdl\ligne.vhd
+LINE = 12
+[Generics]
+(v_phi real        1.500000e+008)
+(longueur real        1.000000e+000)
+(zc real        5.000000e+001)
+[Ports]
+(PORT TERMINAL entree NO-MODE electrical)
+(PORT TERMINAL sortie NO-MODE electrical)
+(PORT TERMINAL masse NO-MODE electrical)
+[Declarations]
+(QUANTITY vi1 real)
+(QUANTITY vi2 real)
+(QUANTITY vr1 real)
+(QUANTITY vr2 real)
+

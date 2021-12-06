@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<SVMRepresentation-v1.0>
+  <model_multi_unit name="ligne" type="any">
+    <entity codeFileName="C:\Users\eleves\Desktop\tp_capteur\hdl\ligne.vhd" codeSameAsModel="1" name="ligne">
+      <generic class="constant" longtypenature="real" name="v_phi" type="real" value="1.5E8"/>
+      <generic class="constant" longtypenature="real" name="longueur" type="real" value="1.0"/>
+      <generic class="constant" longtypenature="real" name="Zc" type="real" value="50.0"/>
+      <port class="terminal" longtypenature="IEEE.ELECTRICAL_SYSTEMS.ELECTRICAL" name="entree" nature="ELECTRICAL" type="std_logic"/>
+      <port class="terminal" longtypenature="IEEE.ELECTRICAL_SYSTEMS.ELECTRICAL" name="sortie" nature="ELECTRICAL" type="std_logic"/>
+      <port class="terminal" longtypenature="IEEE.ELECTRICAL_SYSTEMS.ELECTRICAL" name="masse" nature="ELECTRICAL" type="std_logic"/>
+      <local class="quantity" longtypenature="real" name="VI1" type="real" value="0.0"/>
+      <local class="quantity" longtypenature="real" name="VI2" type="real" value="0.0"/>
+      <local class="quantity" longtypenature="real" name="VR1" type="real" value="0.0"/>
+      <local class="quantity" longtypenature="real" name="VR2" type="real" value="0.0"/>
+      <architecture codeFileName="C:\Users\eleves\Desktop\tp_capteur\hdl\ligne.vhd" codeSameAsEntity="1" name="default">
+        <branch across_default="" across_name="V1" equation="0" equation_lvalue="" equation_rvalue="" from="entree" name="branch0" through_default="" through_name="I1" to="masse"/>
+        <branch across_default="" across_name="V2" equation="0" equation_lvalue="" equation_rvalue="" from="sortie" name="branch1" through_default="" through_name="I2" to="masse"/>
+        <simple_equation equation="V1= VI1 + VR1;&#13;&#10;V2= VI2 + VR2;&#13;&#10;I1=(VI1 - VR1)/Zc;&#13;&#10;I2=-(VI2 -VR2)/Zc;&#13;&#10;VR1=VR2'DELAYED(longueur/v_phi);&#13;&#10;VI2=VI1'DELAYED(longueur/v_phi);" name="equation0"/>
+        <body name="Custom Body"/>
+        <used name="Libraries"/>
+      </architecture>
+      <used name="Libraries">
+        <reference use="IEEE.std_logic_1164.all"/>
+        <reference use="IEEE.ELECTRICAL_SYSTEMS.all"/>
+      </used>
+    </entity>
+  </model_multi_unit>
+</SVMRepresentation-v1.0>

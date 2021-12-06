@@ -1,0 +1,618 @@
+1*******01-Dec-21 *******  SystemVision Version 15.1.1  (Version 15.1.1)  *******16:09:48******
+
+0* Command file for design: schematic_1
+
+0****     INPUT LISTING                                               
+
+0***********************************************************************
+    2  * Top Spice file: ..\..\genhdl\schematic_1\schematic_1.cir
+    3  .OP
+    4  .TRAN 0 40NS 0
+    5  * .ac dec 100  
+    6  .PLOT TRAN V(N1N3) V(N1N5)
+    7  * .plot ac V(n1n3) V(n1n5)
+    8  .OPTION eps=1.0e-5
+    9  .OPTION hmin=0.9e-9
+   10  
+   11  .OPTION print_dc=0
+   12  * save tr toplevel
+   13  * save ac toplevel
+   14  * save ba
+   15  
+   16  * .plot dc V(n1n3) V(n1n5)
+   17  .STEP E(yrcharge,res) 30 70 incr 20
+   18  ** including ..\..\genhdl\schematic_1\schematic_1.cir
+    1  
+    2  * Project SCHEMATIC_1
+    3  * Mentor Graphics Netlist Created with Version 15.1.1
+    4  * File created Wed Dec 01 16:00:03 2021
+    5  * Inifile   : 
+    6  *
+    7  * Config file: C:\MentorGraphics\SystemVision15.1\standard\svspice.cfg
+    8  *
+    9  * Options   : -_ -h -kC:\MentorGraphics\SystemVision15.1\standard\svspice.cfg -gschematic_1.tempfile 
+   10  * 
+   11  * Levels    : 
+   12  * 
+   13  .OPTION noinclib
+   14  * Models for Eldo<->VHDL-AMS data conversion
+   15  .MODEL A2D_ELDO A2D MODE=STD_LOGIC
+   16  .MODEL D2A_ELDO D2A MODE=STD_LOGIC
+   17  .DEFHOOK a2d_eldo
+   18  .DEFHOOK d2a_eldo
+   19  YN1I1 LIGNE(DEFAULT) PORT: N1N3 N1N5 0
+   20  YV_PULSE1 V_PULSE(IDEAL) GENERIC: PERIOD="20 NS" PULSE="1.0" WIDTH="10 NS" 
+   21  + PORT: N1N3 0
+   22  YRCHARGE RESISTOR(IDEAL) GENERIC: RES="50.0" PORT: 0 N1N5
+   23  * DICTIONARY 1
+   24  * GND = 0
+   25  .GLOBAL ELECTRICAL_REF
+   26  .MODEL V_PULSE(IDEAL) MACRO LANG=VHDLAMS LIB=EDULIB
+   27  .MODEL LIGNE(DEFAULT) MACRO LANG=VHDLAMS LIB=WORK
+   28  .MODEL RESISTOR(IDEAL) MACRO LANG=VHDLAMS LIB=EDULIB
+   29  *END
+   18  
+   19  .END
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+
+***** GENERATION ...
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (bytes): 100587
+3 elements
+2 nodes 
+0 input signals
+   18  ** including ..\..\genhdl\schematic_1\schematic_1.cir
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+
+***** GENERATION ...
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (bytes): 99982
+3 elements
+2 nodes 
+0 input signals
+
+ SystemVision Version 15.1.1 Wed Apr 29 05:09:32 GMT 2015
+
+
+*** DATE: 01-Dec-2021  16:09:48
+
+*** TITLE: * Command file for design: schematic_1
+
+TEMPERATURE : 27.000000 degrees C
+
+Searching Operating Point between -1.000000E+013V and 
+                                  1.000000E+013V
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 OPTION SUMMARY                                        TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-012 NMAXSIZE       = 60000    ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMIN           = UNDEF    
+VMAX           = UNDEF    
+
+*** Accuracy Control Options : 
+
+ITOL           = 1.00e-006 EPS            = 1.00e-005 VNTOL          = 1.00e-006 
+RELTOL         = 2.50e-004 RELERR         = 5.00e-002 PIVREL         = 1.00e-003 
+PIVTOL         = 1.00e-013 ABSTOL         = 1.00e-012 FLXTOL         = 1.00e-011 
+MAXORD         = 2.00e+000 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+000 STEP           = 0.00e+000 STARTSMP       = 0.00e+000 
+FREQSMP        = 0.00e+000 COURESOL       = 0.00e+000 TRTOL          = 7.00e+000 
+HMIN           = 9.00e-010 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-001 DCLOG          = 1.00e+000 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-001 
+ABSVAR         = 2.00e-001 SAMPLE         = 0.00e+000 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+000 SCALM          = 1.00e+000 SCALEBSIM      = 1.00e+000 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-004 DEFL           = 1.00e-004 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-006 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+000 
+
+*** General Information Options : 
+
+SDA            = 0        CPTIME         = UNDEF    STAT           = 0        
+TIMEDIV        = 0        SIMUDIV        = 0        SAVETIME       = 0        
+MAXTRAN        = 1000     MAXNODES       = 500      MAXV           = 1.00e+013 
+LIMPROBE       = 1000     FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        
+TNOM           = 2.70e+001 TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 0        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        WSF            = 0        
+WSFASCII       = 0        NOBIN          = 0        NOCOU          = 1        
+WL             = 0        NODE           = 0        LIST           = 0        
+SPI3BIN        = 0        SPI3ASC        = 0        NOMOD          = 0        
+WSF            = 0        WSFASCII       = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        RMOS           = 0        NWRMOS         = 1        
+NONWRMOS       = 0        USEDEFAP       = 0        NOASCII        = 0        
+NOAEX          = 0        AEX            = 0        AEX            = 0        
+ASCII          = 1        MIXED          = 0        SWITCH         = 0        
+USERSWITCH     = 0        TIMING         = 0        MODWL          = 1        
+ULOGIC         = 0        
+
+
+Number of iterations: 1
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+N1N3         0.0         N1N5         0.0         
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+
+0****                 OPERATING POINT INFORMATION                          TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 ACCOUNTING INFORMATION                                TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+    NUNODS NCNODS NUMNOD   NUMEL   DIODES    BJT  JFET  MOSFET
+
+         2      2      2       3        0      0     0       0
+
+
+    NSTOP    NTERM    PERSPA  
+
+        7       23 5.306e+001
+
+    NUMTTP  NUMRTP  LTERTP  LTERTPNW NWNOCON
+
+        33       3       3       3       0
+
+  DIGITAL  INWCALL    ITERNW   MEMSIZE
+
+        0       651.757e+000    104643
+
+    NDEVCALL       NKIRCH  NMAXCALL      ITERM     LATENCY
+
+           0            0         2   1.00e+000   0.000e+000%
+
+
+  TRANSIENT JOB TIME                 0
+
+
+
+CPU time 6 ms
+
+   18  ** including ..\..\genhdl\schematic_1\schematic_1.cir
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+
+***** GENERATION ...
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (bytes): 99982
+3 elements
+2 nodes 
+0 input signals
+
+ SystemVision Version 15.1.1 Wed Apr 29 05:09:32 GMT 2015
+
+
+*** DATE: 01-Dec-2021  16:09:48
+
+*** TITLE: * Command file for design: schematic_1
+
+TEMPERATURE : 27.000000 degrees C
+
+Searching Operating Point between -1.000000E+013V and 
+                                  1.000000E+013V
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 OPTION SUMMARY                                        TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-012 NMAXSIZE       = 60000    ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMIN           = UNDEF    
+VMAX           = UNDEF    
+
+*** Accuracy Control Options : 
+
+ITOL           = 1.00e-006 EPS            = 1.00e-005 VNTOL          = 1.00e-006 
+RELTOL         = 2.50e-004 RELERR         = 5.00e-002 PIVREL         = 1.00e-003 
+PIVTOL         = 1.00e-013 ABSTOL         = 1.00e-012 FLXTOL         = 1.00e-011 
+MAXORD         = 2.00e+000 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+000 STEP           = 0.00e+000 STARTSMP       = 0.00e+000 
+FREQSMP        = 0.00e+000 COURESOL       = 0.00e+000 TRTOL          = 7.00e+000 
+HMIN           = 9.00e-010 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-001 DCLOG          = 1.00e+000 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-001 
+ABSVAR         = 2.00e-001 SAMPLE         = 0.00e+000 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+000 SCALM          = 1.00e+000 SCALEBSIM      = 1.00e+000 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-004 DEFL           = 1.00e-004 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-006 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+000 
+
+*** General Information Options : 
+
+SDA            = 0        CPTIME         = UNDEF    STAT           = 0        
+TIMEDIV        = 0        SIMUDIV        = 0        SAVETIME       = 0        
+MAXTRAN        = 1000     MAXNODES       = 500      MAXV           = 1.00e+013 
+LIMPROBE       = 1000     FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        
+TNOM           = 2.70e+001 TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 0        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        WSF            = 0        
+WSFASCII       = 0        NOBIN          = 0        NOCOU          = 1        
+WL             = 0        NODE           = 0        LIST           = 0        
+SPI3BIN        = 0        SPI3ASC        = 0        NOMOD          = 0        
+WSF            = 0        WSFASCII       = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        RMOS           = 0        NWRMOS         = 1        
+NONWRMOS       = 0        USEDEFAP       = 0        NOASCII        = 0        
+NOAEX          = 0        AEX            = 0        AEX            = 0        
+ASCII          = 1        MIXED          = 0        SWITCH         = 0        
+USERSWITCH     = 0        TIMING         = 0        MODWL          = 1        
+ULOGIC         = 0        
+
+
+Number of iterations: 1
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+N1N3         0.0         N1N5         0.0         
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+
+0****                 OPERATING POINT INFORMATION                          TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 ACCOUNTING INFORMATION                                TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+    NUNODS NCNODS NUMNOD   NUMEL   DIODES    BJT  JFET  MOSFET
+
+         2      2      2       3        0      0     0       0
+
+
+    NSTOP    NTERM    PERSPA  
+
+        7       23 5.306e+001
+
+    NUMTTP  NUMRTP  LTERTP  LTERTPNW NWNOCON
+
+        35       6       6       6       0
+
+  DIGITAL  INWCALL    ITERNW   MEMSIZE
+
+        0       631.500e+000    104323
+
+    NDEVCALL       NKIRCH  NMAXCALL      ITERM     LATENCY
+
+           0            0         2   1.00e+000   0.000e+000%
+
+
+  TRANSIENT JOB TIME                 0
+
+
+
+CPU time 1 ms
+
+   18  ** including ..\..\genhdl\schematic_1\schematic_1.cir
+
+End of file 
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+
+***** GENERATION ...
+
+
+***** 0  error(s). 
+***** 0  warning(s). 
+
+
+INFORMATION ABOUT COMPILATION 
+
+
+Memory space allocated (bytes): 99982
+3 elements
+2 nodes 
+0 input signals
+
+ SystemVision Version 15.1.1 Wed Apr 29 05:09:32 GMT 2015
+
+
+*** DATE: 01-Dec-2021  16:09:48
+
+*** TITLE: * Command file for design: schematic_1
+
+TEMPERATURE : 27.000000 degrees C
+
+Searching Operating Point between -1.000000E+013V and 
+                                  1.000000E+013V
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 OPTION SUMMARY                                        TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+*** DC Control Options : 
+
+GMIN           = 1.00e-012 NMAXSIZE       = 60000    ITL1           = 100      
+GRAMP          = 0        NETSIZE        = 100      VMIN           = UNDEF    
+VMAX           = UNDEF    
+
+*** Accuracy Control Options : 
+
+ITOL           = 1.00e-006 EPS            = 1.00e-005 VNTOL          = 1.00e-006 
+RELTOL         = 2.50e-004 RELERR         = 5.00e-002 PIVREL         = 1.00e-003 
+PIVTOL         = 1.00e-013 ABSTOL         = 1.00e-012 FLXTOL         = 1.00e-011 
+MAXORD         = 2.00e+000 
+
+*** Time-step Control Options : 
+
+ZOOMTIME       = 1.00e+000 STEP           = 0.00e+000 STARTSMP       = 0.00e+000 
+FREQSMP        = 0.00e+000 COURESOL       = 0.00e+000 TRTOL          = 7.00e+000 
+HMIN           = 9.00e-010 ITL3           = 3        ITL4           = 13       
+FT             = 1.25e-001 DCLOG          = 1.00e+000 LVLTIM         = 2        
+LVLCNV         = 2        DVDT           = -1       RELVAR         = 1.50e-001 
+ABSVAR         = 2.00e-001 SAMPLE         = 0.00e+000 HMAX           = UNDEF    
+
+
+*** MosFet default Options : 
+
+SCALE          = 1.00e+000 SCALM          = 1.00e+000 SCALEBSIM      = 1.00e+000 
+DEFAD          = UNDEF    DEFAS          = UNDEF    DEFPD          = UNDEF    
+DEFPS          = UNDEF    DEFW           = 1.00e-004 DEFL           = 1.00e-004 
+DEFNRD         = UNDEF    DEFNRS         = UNDEF    XA             = 6.00e-006 
+LIMRMOS        = UNDEF    SHRINK         = 1.00e+000 
+
+*** General Information Options : 
+
+SDA            = 0        CPTIME         = UNDEF    STAT           = 0        
+TIMEDIV        = 0        SIMUDIV        = 0        SAVETIME       = 0        
+MAXTRAN        = 1000     MAXNODES       = 500      MAXV           = 1.00e+013 
+LIMPROBE       = 1000     FLICKER_NOISE  = 0        THERMAL_NOISE  = 0        
+TNOM           = 2.70e+001 TMAX           = UNDEF    
+SPICDC         = 0        SPIOUT         = 0        NEWTON         = 1        
+OSR            = 0        TRAP           = 1        GEAR           = 0        
+BE             = 0        PROBEOP        = 0        NOLAT          = 0        
+NWLAT          = 0        ANALOG         = 0        BBDEBUG        = 0        
+NOSIZECHK      = 0        QTRUNC         = 0        UNBOUND        = 0        
+LCAPOP         = 0        STVER          = 0        MOTOROLA       = 0        
+AMS            = 0        ASPEC          = 0        INPUT          = 0        
+NOINIT         = 0        PSF            = 0        WSF            = 0        
+WSFASCII       = 0        NOBIN          = 0        NOCOU          = 1        
+WL             = 0        NODE           = 0        LIST           = 0        
+SPI3BIN        = 0        SPI3ASC        = 0        NOMOD          = 0        
+WSF            = 0        WSFASCII       = 0        NOBIN          = 0        
+NOCOU          = 1        WL             = 0        NODE           = 0        
+LIST           = 0        SPI3BIN        = 0        SPI3ASC        = 0        
+NOMOD          = 0        RMOS           = 0        NWRMOS         = 1        
+NONWRMOS       = 0        USEDEFAP       = 0        NOASCII        = 0        
+NOAEX          = 0        AEX            = 0        AEX            = 0        
+ASCII          = 1        MIXED          = 0        SWITCH         = 0        
+USERSWITCH     = 0        TIMING         = 0        MODWL          = 1        
+ULOGIC         = 0        
+
+
+Number of iterations: 1
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 INITIAL TRANSIENT SOLUTION                           TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+  NODE         VOLTAGE      NODE         VOLTAGE    
+N1N3         0.0         N1N5         0.0         
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+
+0****                 OPERATING POINT INFORMATION                          TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+1***************01-Dec-2021 ***********************  SystemVision Version 15.1.1  (Build Date Wed Apr 29 05:09:32 GMT 2015)  ***********************16:09:48*****************
+
+0* Command file for design: schematic_1
+0****                 ACCOUNTING INFORMATION                                TEMPERATURE =   27.000 DEG C
+
+0*************************************************************************************************************************
+
+
+
+
+
+    NUNODS NCNODS NUMNOD   NUMEL   DIODES    BJT  JFET  MOSFET
+
+         2      2      2       3        0      0     0       0
+
+
+    NSTOP    NTERM    PERSPA  
+
+        7       23 5.306e+001
+
+    NUMTTP  NUMRTP  LTERTP  LTERTPNW NWNOCON
+
+        34       1       1       1       0
+
+  DIGITAL  INWCALL    ITERNW   MEMSIZE
+
+        0       651.806e+000    104707
+
+    NDEVCALL       NKIRCH  NMAXCALL      ITERM     LATENCY
+
+           0            0         2   1.00e+000   0.000e+000%
+
+
+  TRANSIENT JOB TIME                 0
+
+
+
+CPU time 1 ms
+

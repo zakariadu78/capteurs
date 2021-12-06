@@ -1,0 +1,23 @@
+LIST TESTBENCHES
+schematic_1
+ENDLIST
+ACTIVE_TESTBENCH schematic_1
+SECTION schematic_1
+TYPE SCH
+NL_OPTION SPICE ENTINST USELIBS PAREXT
+SIM_SPICE 1
+DESIGN_ROOT genhdl\schematic_1\schematic_1.cir
+LIST VHDL
+hdl\ligne.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\v_pulse.vhd
+%SV_ROOT%\win32\edulib\%admsver%\Electrical\resistor.vhd
+ENDLIST
+LIST SPICE
+genhdl\schematic_1\schematic_1.cir
+ENDLIST
+ENDSECTION
+LIST ADDITIONAL ADMS LIBRARIES
+ENDLIST
+LIST SPICE LIBRARIES
+%SV_ROOT%\win32\Libraries\SVLib\SVLib_Spice.lib
+ENDLIST
